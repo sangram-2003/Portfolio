@@ -6,7 +6,7 @@ export const create = createAsyncThunk(
   "create_project",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:8080/projects", data);
+      const res = await axios.post("https://portfolio-6b93.onrender.com/projects", data);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -19,7 +19,7 @@ export const getAll = createAsyncThunk(
   "getAll_project",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await axios.get("http://localhost:8080/projects");
+      const res = await axios.get("https://portfolio-6b93.onrender.com/projects");
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -32,7 +32,7 @@ export const deleteone = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     console.log("api calling" , id);
     try {
-      const res = await axios.delete(`http://localhost:8080/projects/${id}`);
+      const res = await axios.delete(`https://portfolio-6b93.onrender.com/projects/${id}`);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -48,7 +48,7 @@ export const update = createAsyncThunk(
     
     try {
       
-      const res = await axios.patch(`http://localhost:8080/projects/${data.id}`, data);
+      const res = await axios.patch(`https://portfolio-6b93.onrender.com/projects/${data.id}`, data);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
