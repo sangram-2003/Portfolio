@@ -6,7 +6,7 @@ export const create = createAsyncThunk(
   "create_review",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:8080/reviews", data);
+      const res = await axios.post("https://portfolio-6b93.onrender.com/reviews", data);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -19,7 +19,7 @@ export const getAll = createAsyncThunk(
   "getAll_review",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await axios.get("http://localhost:8080/reviews");
+      const res = await axios.get("https://portfolio-6b93.onrender.com/reviews");
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -32,7 +32,7 @@ export const deleteone = createAsyncThunk(
   async (id, { rejectWithValue }) => {
    
     try {
-      const res = await axios.delete(`http://localhost:8080/reviews/${id}`);
+      const res = await axios.delete(`https://portfolio-6b93.onrender.com/reviews/${id}`);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -48,7 +48,7 @@ export const update = createAsyncThunk(
     
     try {
       
-      const res = await axios.patch(`http://localhost:8080/reviews/${data.id}`, data);
+      const res = await axios.patch(`https://portfolio-6b93.onrender.com/reviews/${data.id}`, data);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
