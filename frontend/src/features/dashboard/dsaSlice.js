@@ -6,7 +6,7 @@ export const create = createAsyncThunk(
   "create_dsa",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:8080/dsa", data);
+      const res = await axios.post("https://portfolio-6b93.onrender.com/dsa", data);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -19,7 +19,7 @@ export const getAll = createAsyncThunk(
   "getAll_dsa",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await axios.get("http://localhost:8080/dsa");
+      const res = await axios.get("https://portfolio-6b93.onrender.com/dsa");
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -31,7 +31,7 @@ export const deleteone = createAsyncThunk(
   "deleteone_dsa",
   async (id, { rejectWithValue }) => {
     try {
-      const res = await axios.delete(`http://localhost:8080/dsa/${id}`);
+      const res = await axios.delete(`https://portfolio-6b93.onrender.com/dsa/${id}`);
       return res.data; // axios automatically parses the response as JSON
     } catch (error) {
       return rejectWithValue(error.response.data.message || error.message); // handle error properly
@@ -45,7 +45,7 @@ export const update = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const res = await axios.patch(
-        `http://localhost:8080/dsa/${data.id}`,
+        `https://portfolio-6b93.onrender.com/dsa/${data.id}`,
         data
       );
       return res.data; // axios automatically parses the response as JSON
