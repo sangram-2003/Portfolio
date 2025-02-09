@@ -40,7 +40,7 @@ const Projects = () => {
     <>
       <div className="border-b-2 flex overflow-hidden relative items-center h-24 justify-between min-h-[3.5rem] col-span-2 row-span-1">
         <img
-          src="./meakup.jpg"
+          src="./meap.jpg"
           className="w-full bg-cover absolute top-0"
           alt="Background"
         />
