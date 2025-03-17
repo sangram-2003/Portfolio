@@ -41,7 +41,7 @@ const Sidebar = () => {
     <>
       <div className="bg-white border-r-[0.5px] hidden sm:hidden md:block shadow-xl shadow-black border-gray-200 overflow-hidden relative py-2  min-h-60 md:col-span-3 md:w-[18rem]  md:fixed md:h-full  ">
         <div className="w-full px-4 py-4">
-          <img src="./man1.jpg" className="w-full h-[13rem] rounded-md"></img>
+          <img src="./jhghf-removebg-preview.png" className="w-full h-[13rem] rounded-md"></img>
           <div className="w-full px-4 ">
             <p className="text-xl text-violet-800 font-serif mt-2  text-center font-bold tracking-wide">
               Sangram Bauri
